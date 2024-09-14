@@ -26,7 +26,7 @@
 .row {
     display: flex;
     flex-direction: row;
-    margin: 6px 0; /* Espacio entre filas */
+    margin: 8px 0; /* Espacio entre filas */
 }
 
 .circle {
@@ -34,7 +34,7 @@
     height: 10px;
     background-color: #3d393b;
     border-radius: 50%;
-    margin: 0 6px; /* Espacio entre círculos */
+    margin: 0 8px; /* Espacio entre círculos */
 }
 
 /* Elemento 2: Línea horizontal */

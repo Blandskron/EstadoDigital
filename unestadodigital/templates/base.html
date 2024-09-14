@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="{% static 'css/contenido.css' %}">    
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
     <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/logoCabecera.css' %}">
+    <link rel="stylesheet" href="{% static 'css/forms.css' %}">
 </head>
 <body>
 
@@ -31,6 +33,33 @@
         <div class=logoCabecera>
             {% include 'logoCabecera.html' %}
         </div>
+        <br>
+        <div class="main">
+            <div class="foto">
+                <img src="{% static 'img/foto.png' %}" alt="Logo de Un Estado Digital">
+            </div>
+            <div class="info">
+                <h2>9 OCTUBRE</h2>
+                <br>
+                <h3 style="background-color: #ffc571;">8:30 - 18:00 Hrs</h3>
+                <br>
+                <h3>UNIVERSIDAD DE CHILE</h3>
+                <h3>CASA CENTRAL</h3>
+                <br>
+                <p>INTELIGENCIA ARTIFICIAL - SERVICIOS DIGITALES INTEGRADOS</p>
+                <p>IDENTIDAD DIGITAL - GOBERNANZA DE DATOS</p>
+                <p>CIBERSEGURIDAD - SUMINISTROS TI Y TALENTO DIGITAL</p>
+                <br>
+                <div class="form">
+                    <br>
+                    <h3>Formulario de Inscripcion</h3>
+                    <br>
+                    {% block content %}
+                    {% endblock %}
+                </div>
+            </div>
+        </div>
+        <br>
     </div>
 
     <div id="background-container"></div>
