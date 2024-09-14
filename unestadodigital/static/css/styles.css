@@ -85,7 +85,20 @@ h3 {
 
 .form {
     width: 100%;
-    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imagenes {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.imagen {
+    width: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -97,4 +110,17 @@ h3 {
         flex-direction: column;
         align-items: center; /* Opcional: centrar elementos horizontalmente */
     }
+
+    .info {
+        align-items: center;
+    }
+
+    .form {
+        padding-right: 15px;
+    }
+
+    .imagenes {
+        flex-direction: column;
+    }
+
 }

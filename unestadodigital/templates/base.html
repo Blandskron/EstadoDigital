@@ -23,6 +23,7 @@
     <link rel="stylesheet" href="{% static 'css/header.css' %}">
     <link rel="stylesheet" href="{% static 'css/logoCabecera.css' %}">
     <link rel="stylesheet" href="{% static 'css/forms.css' %}">
+    <link rel="stylesheet" href="{% static 'css/circulos.css' %}">
 </head>
 <body>
 
@@ -61,6 +62,20 @@
             </div>
         </div>
         <br>
+        <br>
+        <div class="imagenes">
+            <div class="imagen">
+                <img style="width: 100%;" src="{% static 'img/foto1.png' %}" alt="Logo de Un Estado Digital">
+            </div>
+            <div class="imagen">
+                <img style="width: 100%;" src="{% static 'img/foto2.png' %}" alt="Logo de Un Estado Digital">
+            </div>
+            <div class="imagen">
+                <img style="width: 100%;" src="{% static 'img/foto3.png' %}" alt="Logo de Un Estado Digital">
+            </div>
+        </div>
+        <br>
+        {% include 'circulos.html' %}
     </div>
 
     <div id="background-container"></div>
