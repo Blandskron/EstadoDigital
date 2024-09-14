@@ -1,7 +1,10 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1>¡Registro completado con éxito!</h1>
-    <p>Pronto recibirás más información en tu correo electrónico. No olvides revisar tu bandeja de entrada, promociones y correo no deseado para asegurarte de no perderte ningún detalle importante.</p>
-    <a href="{% url 'home' %}" class="btn"><button>Volver al formulario</button></a>
+    <br>
+    <h3>¡Registro completado con éxito!</h3>
+    <br>
+    <h3>Pronto recibirás más información en tu correo electrónico. No olvides revisar tu bandeja de entrada, promociones y correo no deseado para asegurarte de no perderte ningún detalle importante.</h3>
+    <br>
+    <a href="{% url 'home' %}"><button  class="btn-submit">Volver al formulario</button></a>
 {% endblock %}
