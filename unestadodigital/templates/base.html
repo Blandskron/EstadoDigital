@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Modificar-->
+    <meta name="description" content="Tech Awards 2024 en el Centro de Innovación UC Anacleto Angelini. Auditorio Principal.">
+    <meta name="keywords" content="Tech Awards, Innovación, Tecnología, 2024, UC, Anacleto Angelini">
+    <meta name="author" content="Tech Awards 2024">
+    <meta property="og:title" content="Tech Awards 2024">
+    <meta property="og:description" content="Únete a nosotros en el Tech Awards 2024 en el Centro de Innovación UC Anacleto Angelini. Auditorio Principal.">
+    <!--Modificar-->
+    <meta property="og:image" content="{% static 'img/logo.webp' %}">
+    <meta property="og:url" content="https://unestadodigital.cl/">
+    <meta property="og:type" content="website">
+    <title>Un Estado Digital</title>
+    <link rel="icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/background.css' %}">
+    <link rel="stylesheet" href="{% static 'css/contenido.css' %}">    
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+</head>
+<body>
+
+    <div class="contenido">
+        <header>
+            {% include 'header.html' %}
+        </header>
+        <div class=logoCabecera>
+            {% include 'logoCabecera.html' %}
+        </div>
+    </div>
+
+    <div id="background-container"></div>
+
+    <script src="{% static 'js/background.js' %}"></script>
+</body>
+</html>
