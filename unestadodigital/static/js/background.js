@@ -16,9 +16,9 @@ document.addEventListener('DOMContentLoaded', function () {
         constructor() {
             this.x = Math.random() * canvas.width;
             this.y = Math.random() * canvas.height;
-            this.size = Math.random() * 5 + 1;
-            this.speedX = Math.random() * 2 - 1.5;
-            this.speedY = Math.random() * 2 - 1.5;
+            this.size = Math.random() * 3 + 1;
+            this.speedX = Math.random() * 1 - 0.5;
+            this.speedY = Math.random() * 1 - 0.5;
         }
 
         update() {
@@ -34,8 +34,8 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         draw() {
-            ctx.fillStyle = "rgba(150, 179, 255, 0.3)";
-            ctx.strokeStyle = "rgba(1, 75, 160, 0.3)";
+            ctx.fillStyle = "rgba(88, 83, 84, 0.5)";
+            ctx.strokeStyle = "rgba(88, 83, 84, 0.5)";
             ctx.lineWidth = 2;
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 if (distance < 100) {
                     opacityValue = 1 - distance / 100;
-                    ctx.strokeStyle = `rgba(143, 0, 255,${opacityValue})`;
+                    ctx.strokeStyle = `rgba(88, 83, 84,${opacityValue})`;
                     ctx.lineWidth = 0.1;
                     ctx.beginPath();
                     ctx.moveTo(particles[a].x, particles[a].y);
