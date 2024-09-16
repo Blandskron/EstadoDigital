@@ -14,24 +14,21 @@ def contact_view(request):
             contact = form.save()
 
             # Enviar correo de confirmación
-            subject = '¡Tu registro TECH AWARDS 2024 ha sido completado con éxito!'
+            subject = '¡Tu registro UN ESTADO DIGITAL 2024 ha sido completado con éxito!'
             message = (
                 f'Estimado/a {contact.name} {contact.last_name},\n\n'
-                '¡Gracias por inscribirte en el evento de TECH AWARDS 2024! Tu registro ha sido confirmado y estamos emocionados de contar con tu valiosa asistencia.\n\n'
+                '¡Gracias por inscribirte en el evento de UN ESTADO DIGITAL 2024! Tu registro ha sido confirmado y estamos emocionados de contar con tu valiosa asistencia.\n\n'
                 'En breve, recibirás más información sobre el evento en tu correo electrónico. \n\n'
                 'Si tienes alguna pregunta o necesitas asistencia adicional, no dudes en contactarnos.\n\n'
-                '¡Nos vemos el 28 de agosto a las 9:00 AM!\n\n'
                 'Saludos cordiales,\n'
-                'El equipo de TECH AWARDS 2024'
+                'El equipo de UN ESTADO DIGITAL 2024'
             )
             html_message = (
                 f'<p>Estimado/a {contact.name} {contact.last_name},</p>'
-                '<p>¡Gracias por inscribirte en el evento de <strong>TECH AWARDS 2024</strong>! Tu registro ha sido confirmado y estamos emocionados de contar con tu valiosa asistencia.</p>'
+                '<p>¡Gracias por inscribirte en el evento de <strong>UN ESTADO DIGITAL 2024</strong>! Tu registro ha sido confirmado y estamos emocionados de contar con tu valiosa asistencia.</p>'
                 '<p>En breve, recibirás más información sobre el evento en tu correo electrónico.</p>'
                 '<p>Si tienes alguna pregunta o necesitas asistencia adicional, no dudes en contactarnos.</p>'
-                '<p>¡Nos vemos el 28 de agosto a las 9:00 AM!</p>'
                 '<p>Saludos cordiales.</p>'
-                '<img src="https://img.techawards2024.cl/var/albums/Firma.png?m=1722292354" alt="Firma de TECH AWARDS 2024" style="width: 100%;">'
             )
             from_email = settings.EMAIL_HOST_USER
             recipient_list = [contact.email]

@@ -23,17 +23,17 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-z&-0=92t&q7jto!b3aj&#a2+*d!56+y&r8&+2o+xn^mwe4xa2%'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['unestadodigital.cl']
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 's320.v2nets.com'
 EMAIL_PORT = 465
 EMAIL_USE_SSL = True
-EMAIL_HOST_USER = 'evento@techawards2024.cl'
-EMAIL_HOST_PASSWORD = 'i>6P;7)7xlN2'
-DEFAULT_FROM_EMAIL = 'evento@techawards2024.cl'
+EMAIL_HOST_USER = 'evento@unestadodigital.cl'
+EMAIL_HOST_PASSWORD = 'GcC3U@Onho-U'
+DEFAULT_FROM_EMAIL = 'evento@unestadodigital.cl'
 
 # Application definition
 
