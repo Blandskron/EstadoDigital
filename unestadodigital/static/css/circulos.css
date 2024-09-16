@@ -6,10 +6,10 @@
 
 .circulo1 {
     position:fixed;
-    width:60px;
-    height:60px;
-    bottom:170px;
-    right:25px;
+    width:35px;
+    height:35px;
+    bottom:130px;
+    right:5px;
     background-color: #459eff;
     border-radius:50%;
     z-index:100;
@@ -17,10 +17,10 @@
 
 .circulo2 {
     position:fixed;
-    width:60px;
-    height:60px;
-    bottom:115px;
-    right:25px;
+    width:35px;
+    height:35px;
+    bottom:95px;
+    right:5px;
     background-color: #459eff;
     border-radius:50%;
     z-index:100;
@@ -28,10 +28,10 @@
 
 .circulo3 {
     position:fixed;
-    width:60px;
-    height:60px;
+    width:35px;
+    height:35px;
     bottom:60px;
-    right:25px;
+    right:5px;
     background-color: #459eff;
     border-radius:50%;
     z-index:100;
@@ -44,20 +44,17 @@
         width:15px;
         height:15px;
         bottom: 88px;
-        right:5px;
     }
 
     .circulo2 {
         width:15px;
         height:15px;
         bottom:74px;
-        right:5px;
     }
 
     .circulo3 {
         width:15px;
         height:15px;
-        right:5px;
     }
 
 }
