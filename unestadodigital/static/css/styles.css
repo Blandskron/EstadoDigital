@@ -66,8 +66,8 @@ p {
     width: 100%;
     display: flex;
     flex-direction: row;
-    align-items: center;
     justify-content: center;
+    align-items: stretch;
 }
 
 .foto {
@@ -75,8 +75,8 @@ p {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: space-between;
 }
 
 .info {

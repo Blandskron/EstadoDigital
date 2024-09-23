@@ -26,6 +26,25 @@
     <link rel="stylesheet" href="{% static 'css/circulos.css' %}">
     <link rel="stylesheet" href="{% static 'css/rectangulo.css' %}">
     <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <style>
+        /* Estilos para el contador */
+        #countdown {
+            font-family: 'CANAVAR', sans-serif;
+            color: #333;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+            margin-top: 50px;
+        }
+        #countdown div {
+            text-align: center;
+        }
+        #countdown span {
+            font-size: 2em;
+            display: block;
+        }
+    </style>
 </head>
 <body>
 
@@ -39,7 +58,37 @@
         <br>
         <div class="main">
             <div class="foto">
-                <img style="width: 100%;" src="{% static 'img/foto.png' %}" alt="Logo de Un Estado Digital">
+                <br>
+                <div style="margin-top: 50px;">
+                    <p>
+                        El 9 de octubre, no te pierdas la segunda edición del seminario "Un Estado Digital", un evento clave que reunirá a expertos del sector público, privado y académico para debatir los avances y desafíos en la <strong>transformación digital del Estado de Chile.</strong> Se tratarán temas cruciales como <strong>Inteligencia Artificial, Servicios Digitales, Identidad Digital y Ciberseguridad,</strong> destacando el impacto de estas tecnologías en el futuro del país.
+                        Puedes inscribirte para asistir presencialmente o seguir la transmisión en vivo por streaming. 
+                        ¡Sé parte del cambio digital en Chile y regístrate ahora!
+                    </p>
+                </div>
+                <br>
+                <div style="margin-top: 50px;">
+                    <img style="width: 100%;" src="{% static 'img/foto.png' %}" alt="Logo de Un Estado Digital">
+                </div>
+                <br>
+                <div id="countdown">
+                    <div>
+                        <span id="days"></span>
+                        Días
+                    </div>
+                    <div>
+                        <span id="hours"></span>
+                        Horas
+                    </div>
+                    <div>
+                        <span id="minutes"></span>
+                        Minutos
+                    </div>
+                    <div>
+                        <span id="seconds"></span>
+                        Segundos
+                    </div>
+                </div>
             </div>
             <br>
             <div class="info">
@@ -86,5 +135,36 @@
     <div id="background-container"></div>
 
     <script src="{% static 'js/background.js' %}"></script>
+    <script>
+        // Obtiene la fecha del evento desde el contexto de Django
+        var eventDate = new Date("{{ event_date|date:'Y-m-d H:i:s' }}").getTime();
+
+        // Actualiza el contador cada segundo
+        var x = setInterval(function() {
+            // Obtiene la fecha y hora actuales
+            var now = new Date().getTime();
+
+            // Calcula la diferencia en milisegundos
+            var distance = eventDate - now;
+
+            // Calcula días, horas, minutos y segundos
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            // Muestra el resultado en los elementos correspondientes
+            document.getElementById("days").innerHTML = days;
+            document.getElementById("hours").innerHTML = ("0" + hours).slice(-2);
+            document.getElementById("minutes").innerHTML = ("0" + minutes).slice(-2);
+            document.getElementById("seconds").innerHTML = ("0" + seconds).slice(-2);
+
+            // Si la cuenta regresiva termina, muestra un mensaje
+            if (distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "¡El evento ha comenzado!";
+            }
+        }, 1000);
+    </script>
 </body>
 </html>
