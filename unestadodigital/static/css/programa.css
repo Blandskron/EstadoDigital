@@ -1,0 +1,22 @@
+.tituloprograma {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.program-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    gap: 10px;
+    width: 100%;
+    margin: auto;
+    justify-items: center;
+}
+
+.cell {
+    padding: 5px;
+    width: 60%;
+    text-align: center;
+    border-radius: 50px;
+}

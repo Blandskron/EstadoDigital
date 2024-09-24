@@ -30,9 +30,9 @@
 }
 
 .circle {
-    width: 10px; /* Tamaño del círculo */
-    height: 10px;
-    background-color: #3d393b;
+    width: 5px; /* Tamaño del círculo */
+    height: 5px;
+    background-color: rgba(61, 57, 59, 0.4);
     border-radius: 50%;
     margin: 0 8px; /* Espacio entre círculos */
 }
@@ -43,7 +43,7 @@
     top: 20%; /* Centrar verticalmente */
     right: 20px;
     width: 90%;
-    height: 3px;
+    height: 2px;
     background-color: #3d393b;
     transform: translateY(-50%); /* Ajuste para centrar exactamente */
     z-index: 2; /* Coloca la línea detrás del rombo */

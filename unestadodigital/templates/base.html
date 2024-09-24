@@ -23,28 +23,11 @@
     <link rel="stylesheet" href="{% static 'css/header.css' %}">
     <link rel="stylesheet" href="{% static 'css/logoCabecera.css' %}">
     <link rel="stylesheet" href="{% static 'css/forms.css' %}">
+    <link rel="stylesheet" href="{% static 'css/tematicas.css' %}">
+    <link rel="stylesheet" href="{% static 'css/programa.css' %}">
     <link rel="stylesheet" href="{% static 'css/circulos.css' %}">
     <link rel="stylesheet" href="{% static 'css/rectangulo.css' %}">
     <link rel="stylesheet" href="{% static 'css/footer.css' %}">
-    <style>
-        /* Estilos para el contador */
-        #countdown {
-            font-family: 'CANAVAR', sans-serif;
-            color: #333;
-            display: flex;
-            gap: 20px;
-            justify-content: center;
-            margin-top: 20px;
-            margin-top: 50px;
-        }
-        #countdown div {
-            text-align: center;
-        }
-        #countdown span {
-            font-size: 2em;
-            display: block;
-        }
-    </style>
 </head>
 <body>
 
@@ -92,9 +75,9 @@
             </div>
             <br>
             <div class="info">
-                <h2 style="color: #ffc571;">9 OCTUBRE</h2>
+                <h2 style="color: #F6A443;">9 OCTUBRE</h2>
                 <br>
-                <h3 style="color: #56c1a5;">8:30 - 18:30 Hrs</h3>
+                <h3 style="color: #02AC9A;">8:30 - 18:30 Hrs</h3>
                 <br>
                 <h3>UNIVERSIDAD DE CHILE</h3>
                 <h3>CASA CENTRAL</h3>
@@ -107,7 +90,7 @@
                 <div class="form">
                     <br>
                     <br>
-                    <h3>Formulario de Inscripcion</h3>
+                    <h3>Formulario de Inscripción</h3>
                     <br>
                     <br>
                     {% block content %}
@@ -119,11 +102,16 @@
         </div>
         <br>
         <br>
+        {% include 'tematicas.html' %}
+        {% include 'programa.html' %}
+        <br>
+        <!--
         <div class="imagenes">
             <div class="imagen">
                 <img style="width: 100%;" src="{% static 'img/foto1.png' %}" alt="Logo de Un Estado Digital">
             </div>
         </div>
+        -->
         <br>
         <br>
         {% include 'circulos.html' %}

@@ -1,0 +1,73 @@
+.tematicas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas iguales */
+    gap: 10px;
+    width: 100%;
+    margin: auto;
+}
+
+.line2 {
+    position: absolute; /* Para superponer sobre el rombo */
+    width: 40%;
+    height: 2px;
+    margin-top: 10px;
+    background-color: #3d393b;
+    transform: translateY(-50%); /* Ajuste para centrar exactamente */
+}
+
+.grid-panel {
+    padding: 20px;
+}
+
+/* Hacer que el segundo ítem en la segunda fila ocupe 2 columnas */
+.grid-panel.wide-2 {
+    grid-column: span 2;
+}
+
+/* Hacer que el ítem en la tercera fila ocupe las 3 columnas */
+.grid-panel.full-width {
+    grid-column: span 3;
+}
+
+.panel {
+    position: relative;
+    margin: 10px;
+    width: 100%;
+    z-index: 1; 
+}
+
+.panel h3 {
+    position: relative;
+    z-index: 2;
+    color: #00AC9A;
+    text-align: start;
+}
+
+.panel h4 {
+    position: relative;
+    z-index: 2;
+    color: #00AC9A;
+    text-align: start;
+}
+
+.panel h2 {
+    margin-top: 0;
+}
+
+.panel p {
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    color: #3C3739;
+    text-align: justify;
+}
+
+.big-number {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    font-size: 200px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: rgba(86, 193, 165, 0.2);
+    z-index: 0; 
+}

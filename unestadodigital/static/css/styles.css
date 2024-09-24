@@ -18,6 +18,11 @@
     src: url('../fonts/CANAVAR.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Baltore';
+    src: url('../fonts/Baltore.ttf') format('truetype');
+}
+
 body {
     width: 100%;
     background-color: #f7f7f7;
@@ -32,34 +37,40 @@ body {
 
 /* Estilos para h1 */
 h1 {
-    color: #56c1a5;
-    font-family: 'Batsand', sans-serif;
-    font-size: 50px;
+    color: #02AC9A;
+    font-family: 'Baltore', sans-serif;
+    font-size: 42px;
 }
 
 /* Estilos para h2 */
 h2 {
-    color: #3d393b;
+    color: #3C3739;
     font-family: 'CANAVAR', sans-serif;
-    font-size: 39px;
+    font-size: 36px;
 }
 
 /* Estilo para la letra 'D' en h2 */
 .highlighted-letter {
-    color: #ff97bf;
+    color: #F095BC;
 }
 
 /* Estilos para h3 */
 h3 {
-    color: #3d393b;
+    color: #3C3739;
     font-family: 'Roboto', sans-serif;
-    font-size: 26px;
+    font-size: 24px;
+}
+
+h4 {
+    color: #02AC9A;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
 }
 
 p {
-    color: #3d393b;
+    color: #3C3739;
     font-family: 'Roboto', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .main {
@@ -106,6 +117,24 @@ p {
     width: 100%;
     display: flex;
     flex-direction: row;
+}
+
+/* Estilos para el contador */
+#countdown {
+    font-family: 'CANAVAR', sans-serif;
+    color: #3C3739;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+    margin-top: 50px;
+}
+#countdown div {
+    text-align: center;
+}
+#countdown span {
+    font-size: 2em;
+    display: block;
 }
 
 /* Media query para pantallas con ancho máximo de 768px */
