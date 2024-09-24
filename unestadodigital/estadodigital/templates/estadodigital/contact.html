@@ -1,45 +1,120 @@
 {% extends "base.html" %}
+
 {% block content %}
 <form method="post">
     {% csrf_token %}
+    
+    <!-- Mostrar errores generales del formulario -->
+    {% if form.non_field_errors %}
+        <div class="alert alert-danger">
+            {{ form.non_field_errors }}
+        </div>
+    {% endif %}
+
     <div class="form-group">
         {{ form.name.label_tag }}
         {{ form.name }}
+        <!-- Mostrar errores específicos del campo -->
+        {% if form.name.errors %}
+            <div class="alert alert-danger">
+                {{ form.name.errors }}
+            </div>
+        {% endif %}
     </div>
+
     <div class="form-group">
         {{ form.last_name.label_tag }}
         {{ form.last_name }}
+        {% if form.last_name.errors %}
+            <div class="alert alert-danger">
+                {{ form.last_name.errors }}
+            </div>
+        {% endif %}
     </div>
+
     <div class="form-group">
         {{ form.rut.label_tag }}
         {{ form.rut }}
+        {% if form.rut.errors %}
+            <div class="alert alert-danger">
+                {{ form.rut.errors }}
+            </div>
+        {% endif %}
     </div>
+
     <div class="form-group">
         {{ form.email.label_tag }}
         {{ form.email }}
+        {% if form.email.errors %}
+            <div class="alert alert-danger">
+                {{ form.email.errors }}
+            </div>
+        {% endif %}
     </div>
+
     <div class="form-group">
         {{ form.phone_number.label_tag }}
         {{ form.phone_number }}
+        {% if form.phone_number.errors %}
+            <div class="alert alert-danger">
+                {{ form.phone_number.errors }}
+            </div>
+        {% endif %}
     </div>
+
     <div class="form-group">
         {{ form.company.label_tag }}
         {{ form.company }}
+        {% if form.company.errors %}
+            <div class="alert alert-danger">
+                {{ form.company.errors }}
+            </div>
+        {% endif %}
     </div>
+
+    <!-- Campo Cargo (Position) -->
+    <div class="form-group">
+        {{ form.position.label_tag }}
+        {{ form.position }}
+        {% if form.position.errors %}
+            <div class="alert alert-danger">
+                {{ form.position.errors }}
+            </div>
+        {% endif %}
+    </div>
+
     <div class="form-group">
         {{ form.region.label_tag }}
         {{ form.region }}
+        {% if form.region.errors %}
+            <div class="alert alert-danger">
+                {{ form.region.errors }}
+            </div>
+        {% endif %}
     </div>
+
     <div class="form-group">
         {{ form.track_of_interest.label_tag }}
         {{ form.track_of_interest }}
+        {% if form.track_of_interest.errors %}
+            <div class="alert alert-danger">
+                {{ form.track_of_interest.errors }}
+            </div>
+        {% endif %}
     </div>
+
     <div class="form-group">
         {{ form.data_sharing_consent.label_tag }}
         <div class="radio-group">
             {{ form.data_sharing_consent }}
+            {% if form.data_sharing_consent.errors %}
+                <div class="alert alert-danger">
+                    {{ form.data_sharing_consent.errors }}
+                </div>
+            {% endif %}
         </div>
     </div>
+
     <button type="submit" class="btn-submit">Enviar</button>
 </form>
 {% endblock %}

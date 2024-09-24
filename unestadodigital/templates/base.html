@@ -57,19 +57,19 @@
                 <div id="countdown">
                     <div>
                         <span id="days"></span>
-                        Días
+                        <p>Días</p>
                     </div>
                     <div>
                         <span id="hours"></span>
-                        Horas
+                        <p>Horas</p>
                     </div>
                     <div>
                         <span id="minutes"></span>
-                        Minutos
+                        <p>Minutos</p>
                     </div>
                     <div>
                         <span id="seconds"></span>
-                        Segundos
+                        <p>Segundos</p>
                     </div>
                 </div>
             </div>
@@ -92,10 +92,13 @@
                     <br>
                     <h3>Formulario de Inscripción</h3>
                     <br>
+                    <p>CUPOS LIMITADOS</p>
                     <br>
                     {% block content %}
                     {% endblock %}
                     <br>
+                    <br>
+                    <button onclick="downloadICS()">Agregar al Calendario</button>
                     <br>
                 </div>
             </div>
@@ -123,6 +126,8 @@
     <div id="background-container"></div>
 
     <script src="{% static 'js/background.js' %}"></script>
+    <script src="{% static 'js/formulario.js' %}"></script>
+    <script src="{% static 'js/calendario.js' %}"></script>
     <script>
         // Obtiene la fecha del evento desde el contexto de Django
         var eventDate = new Date("{{ event_date|date:'Y-m-d H:i:s' }}").getTime();

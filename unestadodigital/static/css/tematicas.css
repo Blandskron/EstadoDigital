@@ -8,7 +8,7 @@
 
 .line2 {
     position: absolute; /* Para superponer sobre el rombo */
-    width: 40%;
+    width: 30%;
     height: 2px;
     margin-top: 10px;
     background-color: #3d393b;
@@ -70,4 +70,61 @@
     font-weight: bold;
     color: rgba(86, 193, 165, 0.2);
     z-index: 0; 
+}
+
+/* Ajustes para pantallas medianas (tabletas) */
+@media (max-width: 1024px) {
+    /* Cambiar la cuadrícula a 2 columnas en pantallas más pequeñas */
+    .tematicas {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    }
+
+    /* Asegurar que los ítems que ocupan 2 o más columnas ocupen todo el ancho disponible */
+    .grid-panel.wide-2 {
+        grid-column: span 2;
+    }
+
+    .grid-panel.full-width {
+        grid-column: span 2;
+    }
+
+    /* Ajustar el tamaño del número grande */
+    .big-number {
+        font-size: 150px;
+    }
+}
+
+/* Ajustes para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    /* Cambiar la cuadrícula a 1 columna para pantallas pequeñas */
+    .tematicas {
+        grid-template-columns: 1fr; /* 1 columna */
+    }
+
+    /* Asegurar que los ítems ocupen el 100% del ancho */
+    .grid-panel,
+    .grid-panel.wide-2,
+    .grid-panel.full-width {
+        grid-column: span 1; /* 1 columna */
+    }
+
+    /* Ajustar el tamaño del número grande para que no sea demasiado intrusivo */
+    .big-number {
+        font-size: 100px;
+        right: 10px;
+        top: 30px;
+    }
+
+    /* Ajustar la tipografía y espaciado */
+    .panel h3, .panel h4 {
+        font-size: 1.5rem;
+    }
+
+    .panel p {
+        font-size: 1rem;
+    }
+
+    .line2 {
+        width: 60%; /* Hacer la línea más visible en pantallas pequeñas */
+    }
 }

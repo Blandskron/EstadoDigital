@@ -20,3 +20,46 @@
     text-align: center;
     border-radius: 50px;
 }
+
+/* Ajustes para pantallas medianas (tabletas) */
+@media (max-width: 1024px) {
+    /* Cambiar la disposición de la .tituloprograma a columna en vez de fila */
+    .tituloprograma {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Ajustar el contenedor del programa a 2 columnas */
+    .program-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    }
+
+    /* Ajustar el tamaño de las celdas */
+    .cell {
+        width: 80%; /* Hacer que las celdas ocupen más espacio */
+    }
+}
+
+/* Ajustes para pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    /* Cambiar la disposición de la .tituloprograma a columna */
+    .tituloprograma {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Cambiar el contenedor del programa a 1 columna */
+    .program-container {
+        grid-template-columns: 1fr; /* 1 columna */
+    }
+
+    /* Ajustar el tamaño de las celdas */
+    .cell {
+        width: 100%; /* Celdas ocupan todo el ancho */
+    }
+
+    /* Ajustar los textos en los párrafos */
+    .cell p {
+        font-size: 1rem; /* Reducir el tamaño del texto en móviles */
+    }
+}

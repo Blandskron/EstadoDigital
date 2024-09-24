@@ -137,6 +137,31 @@ p {
     display: block;
 }
 
+/* Estilos del botón */
+button {
+    background-color: #00AC9A; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none;
+    padding: 15px 30px; /* Espaciado del botón */
+    border-radius: 50px; /* Bordes redondeados */
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transición suave */
+}
+
+/* Efecto hover */
+button:hover {
+    background-color: #007B73; /* Cambiar color en hover */
+    transform: scale(1.05); /* Efecto de crecimiento al pasar el mouse */
+}
+
+/* Efecto de clic */
+button:active {
+    background-color: #005A52; /* Color más oscuro al hacer clic */
+    transform: scale(0.98); /* Efecto de clic (botón se hace un poco más pequeño) */
+}
+
 /* Media query para pantallas con ancho máximo de 768px */
 @media (max-width: 768px) {
     .main {
@@ -154,6 +179,10 @@ p {
 
     .imagenes {
         flex-direction: column;
+    }
+
+    #countdown span {
+        font-size: 22px;
     }
 
 }
