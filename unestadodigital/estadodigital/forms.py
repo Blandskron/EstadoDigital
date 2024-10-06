@@ -3,7 +3,7 @@ from .models import Contact
 
 # Lista de tracks con horarios reales cargados directamente
 TRACKS = [
-    ('Inauguración', 'Inauguración (9:00 - 9:30 Hrs)'),
+    ('Inauguración', 'Inauguración (8:30 - 9:30 Hrs)'),
     ('Keynote', 'Keynote speaker (9:30 - 10:15 Hrs)'),
     ('Inteligencia artificial', 'Inteligencia artificial (10:45 - 12:15 Hrs)'),
     ('Gobernanza de Datos', 'Gobernanza de Datos (12:20 - 13:30 Hrs)'),
@@ -17,7 +17,7 @@ TRACKS = [
 
 # Horarios agrupados para validación
 SCHEDULE_GROUPS = {
-    '9:00 - 9:30 Hrs': ['Inauguración'],
+    '8:30 - 9:30 Hrs': ['Inauguración'],
     '9:30 - 10:15 Hrs': ['Keynote'],
     '10:45 - 12:15 Hrs': ['Inteligencia artificial'],
     '12:20 - 13:30 Hrs': ['Gobernanza de Datos', 'Suministro de Tecnología'],

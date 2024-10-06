@@ -2,7 +2,7 @@ function downloadICS() {
     // Datos del evento
     const eventName = "Evento en Universidad de Chile";
     const eventLocation = "Casa Central, Universidad de Chile";
-    const eventStart = "20241009T113000Z"; // UTC (8:30 AM en Chile es 11:30 UTC)
+    const eventStart = "20241009T110000Z"; // UTC (8:30 AM en Chile es 11:30 UTC)
     const eventEnd = "20241009T213000Z";   // UTC (6:30 PM en Chile es 21:30 UTC)
     const reminder = "-P1D";  // Recordatorio 1 día antes
 
