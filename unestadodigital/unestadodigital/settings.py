@@ -32,9 +32,9 @@ EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 's320.v2nets.com'
 EMAIL_PORT = 465
 EMAIL_USE_SSL = True
-EMAIL_HOST_USER = 'evento@unestadodigital.cl'
-EMAIL_HOST_PASSWORD = 'GcC3U@Onho-U'
-DEFAULT_FROM_EMAIL = 'evento@unestadodigital.cl'
+EMAIL_HOST_USER = 'evento2024@unestadodigital.cl'
+EMAIL_HOST_PASSWORD = 'i2lBER.d{R01'
+DEFAULT_FROM_EMAIL = 'evento2024@unestadodigital.cl'
 
 # Application definition
 

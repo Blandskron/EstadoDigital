@@ -2,25 +2,19 @@ from django.contrib import admin
 from .models import Contact
 
 class ContactAdmin(admin.ModelAdmin):
-    list_display = ('name', 'last_name', 'email', 'phone_number', 'company', 'region', 'get_tracks')
+    list_display = ('name', 'last_name', 'email', 'phone_number', 'company', 'position', 'region', 'get_tracks')
     search_fields = ('name', 'last_name', 'email', 'company', 'region')
-    list_filter = ('region', 'data_sharing_consent')  # Filtra por región y si consintió compartir datos
+    list_filter = ('region', 'data_sharing_consent')  
+    
 
-    # Mostrar los tracks seleccionados en el listado de Contact
     def get_tracks(self, obj):
-        return ", ".join(obj.track_of_interest)  # Como es un JSONField, accedemos directamente
+        return ", ".join(obj.track_of_interest) 
     get_tracks.short_description = 'Tracks seleccionados'
+    
+
+    fields = (
+        'name', 'last_name', 'rut', 'email', 'phone_number', 'company', 
+        'position', 'region', 'track_of_interest', 'data_sharing_consent'
+    )
 
 admin.site.register(Contact, ContactAdmin)
-
-
-"""
-from django.contrib import admin
-from .models import Contact
-
-class ContactAdmin(admin.ModelAdmin):
-    list_display = ('name', 'last_name', 'email', 'phone_number', 'company')
-    search_fields = ('name', 'last_name', 'email', 'company')
-
-admin.site.register(Contact, ContactAdmin)
-"""
