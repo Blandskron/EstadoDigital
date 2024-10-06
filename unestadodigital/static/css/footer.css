@@ -24,11 +24,28 @@ footer {
     align-items: flex-end;
 }
 
+.auspicia {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
 .logos {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    height: 300px;
+    align-items: center;
+}
+
+.logosAuspicia {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(2, 1fr);
     gap: 10px;
     height: 300px;
     align-items: center;
@@ -42,7 +59,7 @@ footer {
 
 .inferior {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     text-align: center;
 }
