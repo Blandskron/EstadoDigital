@@ -1,0 +1,42 @@
+# Git
+.git
+.gitignore
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+.venv/
+pip-log.txt
+pip-delete-this-directory.txt
+.toast/
+.coverage
+.pytest_cache/
+.mypy_cache/
+
+# Django
+unestadodigital/db.sqlite3
+unestadodigital/db.sqlite3-journal
+unestadodigital/staticfiles/
+unestadodigital/media/
+db.sqlite3
+db.sqlite3-journal
+staticfiles/
+media/
+
+# Backups and temporary files
+*.zip
+*.tar.gz
+*.bak
+manage.zip
+unestadodigital/manage.zip
+
+# Docker & Environment
+.env
+Dockerfile
+docker-compose.yml
+.dockerignore
