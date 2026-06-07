@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Agrupamos los tracks por horario
     const scheduleGroups = {
-        '9:00 - 9:30 Hrs': ['Inauguración'],
+        '8:30 - 9:30 Hrs': ['Inauguración'],
         '9:30 - 10:15 Hrs': ['Keynote'],
         '10:45 - 12:15 Hrs': ['Inteligencia artificial'],
         '12:20 - 13:30 Hrs': ['Gobernanza de Datos', 'Suministro de Tecnología'],

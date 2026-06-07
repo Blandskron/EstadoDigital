@@ -23,3 +23,6 @@ urlpatterns = [
     path('', RedirectView.as_view(url=reverse_lazy('home'), permanent=False)),
     path('home/', include('estadodigital.urls')),
 ]
+
+handler404 = 'estadodigital.views.custom_404'
+
